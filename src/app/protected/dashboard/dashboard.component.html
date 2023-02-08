@@ -1,0 +1,18 @@
+<h1>WELCOME</h1>
+
+<div class="container">
+    <button mat-raised-button (click)="logout()">Logout</button>
+</div>
+<mat-card>
+    <mat-card-title>Upload CV</mat-card-title>
+    <br>
+    <mat-card-content>
+        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+        <div class="file-upload">
+            {{fileName || "No file uploaded yet."}}
+            <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>
